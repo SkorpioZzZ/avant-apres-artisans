@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avant / après : site de plombier-chauffagiste | Alexandre Zapolski</title>
+  <meta name="description" content="Refonte d'un site de plombier vieillissant : lisible sur mobile, appel en un clic, prix affichés, formulaire de devis, référencement local.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html">Alexandre Zapolski<small>Avant / après de sites d'artisans</small></a>
+      <a href="../index.html">Toutes les comparaisons</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Plombier-chauffagiste · Paris et petite couronne</span>
+        <h1>Morel Plomberie : avant / après</h1>
+        <p class="lead">Beaucoup d'artisans ont un site créé il y a dix ans : illisible sur téléphone, numéro introuvable, aucun prix. Voici ce que je change pour qu'il fasse à nouveau sonner le téléphone.</p>
+
+        <p class="note">Morel Plomberie est une entreprise fictive. La version « avant » est une <strong>reconstitution</strong> d'un site d'artisan typique des années 2010, pas l'ancien site d'un client réel.<br>
+          <a href="avant/index.html">Voir la version avant</a> · <a href="https://skorpiozzz.github.io/morel-plomberie/">Voir la version après en ligne</a></p>
+
+        <h2 style="margin-top:2.5rem">Sur ordinateur</h2>
+        <div class="compare">
+          <img src="img/apres-desktop.webp" width="1440" height="900" alt="Après : page d'accueil moderne avec titre clair, bouton de devis et bouton d'appel.">
+          <img class="compare__before" src="img/avant-desktop.webp" width="1440" height="900" alt="Avant : page d'accueil datée, texte gris très petit, menu en onglets, compteur de visites.">
+          <div class="compare__line" aria-hidden="true"></div>
+          <span class="tag tag--before">Avant</span>
+          <span class="tag tag--after">Après</span>
+        </div>
+        <label class="visually-hidden" for="compare-range">Glisser pour comparer avant et après</label>
+        <input class="compare__range" id="compare-range" type="range" min="0" max="100" value="50">
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2>Sur téléphone</h2>
+        <p class="lead">C'est là que se joue l'essentiel : un client avec une fuite cherche un plombier sur son téléphone, pas sur un ordinateur.</p>
+        <div class="phones">
+          <figure>
+            <img src="img/avant-mobile.webp" width="390" height="844" loading="lazy" alt="Avant sur téléphone : la page d'ordinateur rétrécie, texte minuscule, aucun bouton d'appel.">
+            <figcaption>Avant : il faut zoomer pour lire, le numéro est en bas de page.</figcaption>
+          </figure>
+          <figure>
+            <img src="img/apres-mobile.webp" width="390" height="844" loading="lazy" alt="Après sur téléphone : titre lisible, bouton de devis, barre d'appel fixe en bas de l'écran.">
+            <figcaption>Après : on appelle en un geste, depuis n'importe quelle page.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Ce qui change, point par point</h2>
+        <table class="changes">
+          <caption>Chaque correction répond à un problème qui fait perdre des clients.</caption>
+          <thead>
+            <tr><th scope="col">Sujet</th><th scope="col">Avant</th><th scope="col">Après</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Téléphone mobile</th>
+              <td data-label="Avant">Page d'ordinateur rétrécie, il faut zoomer pour lire.</td>
+              <td data-label="Après">Mise en page pensée d'abord pour le téléphone.</td>
+            </tr>
+            <tr>
+              <th scope="row">Appeler</th>
+              <td data-label="Avant">Numéro en petit dans le pied de page, non cliquable.</td>
+              <td data-label="Après">Bouton d'appel en haut de page et barre d'appel fixe sur mobile.</td>
+            </tr>
+            <tr>
+              <th scope="row">Message</th>
+              <td data-label="Avant">« Bienvenue sur notre site », sans dire où ni pour quoi.</td>
+              <td data-label="Après">Le titre dit le métier et la zone : Paris, 92, 93, 94.</td>
+            </tr>
+            <tr>
+              <th scope="row">Prix</th>
+              <td data-label="Avant">« Devis sur demande ».</td>
+              <td data-label="Après">Tarifs indicatifs par prestation, pour rassurer avant l'appel.</td>
+            </tr>
+            <tr>
+              <th scope="row">Demande de devis</th>
+              <td data-label="Avant">Lien e-mail qui ouvre une messagerie, souvent non configurée.</td>
+              <td data-label="Après">Formulaire court qui vérifie la zone d'intervention dès le code postal.</td>
+            </tr>
+            <tr>
+              <th scope="row">Lisibilité</th>
+              <td data-label="Avant">Texte de 11 px en gris clair : contraste de 3,5:1.</td>
+              <td data-label="Après">Texte de 17 px, contraste de 16,6:1 (minimum recommandé : 4,5:1).</td>
+            </tr>
+            <tr>
+              <th scope="row">Google</th>
+              <td data-label="Avant">Titre de page « Accueil », pas de description.</td>
+              <td data-label="Après">Titre et description par page, données structurées « plombier » pour la recherche locale.</td>
+            </tr>
+            <tr>
+              <th scope="row">Confiance</th>
+              <td data-label="Avant">Actualité de 2014, compteur de visites.</td>
+              <td data-label="Après">Avis clients, déroulé d'une intervention, engagements.</td>
+            </tr>
+            <tr>
+              <th scope="row">Obligations légales</th>
+              <td data-label="Avant">Pas de mentions légales.</td>
+              <td data-label="Après">Page mentions légales et données personnelles (RGPD).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Votre site a le même âge ?</h2>
+            <p>Je regarde votre site actuel et je vous dis ce qui vaut la peine d'être corrigé.</p>
+          </div>
+          <a class="btn btn--light" href="https://www.malt.fr/profile/alexandrezapolski">Me contacter sur Malt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Alexandre Zapolski, développeur web freelance · <a href="https://www.malt.fr/profile/alexandrezapolski">Profil Malt</a></div>
+  </footer>
+
+  <script src="../js/compare.js" defer></script>
+</body>
+</html>

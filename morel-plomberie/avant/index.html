@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Reconstitution volontairement datée d'un site d'artisan (vers 2012-2014).
+     Sert de "avant" pour la page avant-apres.html. Ne pas utiliser comme modèle.
+     Défauts reproduits : pas de balise viewport, largeur fixe, numéro non cliquable,
+     texte gris clair trop petit, pas de prix, contact par mailto, pas de description. -->
+<title>Accueil</title>
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+  background: #d9dde2 url() repeat-x;
+  background-image: linear-gradient(#8fa3b8, #d9dde2 300px);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #8a8a8a;
+}
+#page {
+  width: 960px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-left: 1px solid #b5bec8;
+  border-right: 1px solid #b5bec8;
+}
+#bandeau {
+  height: 150px;
+  background: linear-gradient(#2d6db5, #0d3d78);
+  position: relative;
+  overflow: hidden;
+}
+#bandeau h1 {
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  top: 38px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 46px;
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 3px 3px 2px #000000;
+  letter-spacing: 2px;
+}
+#bandeau .slogan {
+  position: absolute;
+  left: 34px;
+  top: 100px;
+  color: #ffde59;
+  font-size: 13px;
+  font-weight: bold;
+}
+#bandeau img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 150px;
+  width: 300px;
+  object-fit: cover;
+  opacity: 0.55;
+}
+#menu {
+  background: linear-gradient(#e9e9e9, #bdbdbd);
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #999999;
+  height: 28px;
+}
+#menu a {
+  float: left;
+  display: block;
+  padding: 0 16px;
+  line-height: 28px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  border-right: 1px solid #a5a5a5;
+}
+#menu a.actif { background: #0d3d78; color: #ffffff; }
+table.mise-en-page { width: 100%; border-collapse: collapse; }
+td.colonne-gauche {
+  width: 200px;
+  vertical-align: top;
+  background: #eef1f4;
+  border-right: 1px dashed #c3c9d0;
+  padding: 14px;
+}
+td.contenu { vertical-align: top; padding: 18px 24px; }
+.encadre {
+  border: 1px solid #c3c9d0;
+  background: #ffffff;
+  margin-bottom: 14px;
+}
+.encadre h3 {
+  margin: 0;
+  padding: 4px 6px;
+  background: #0d3d78;
+  color: #ffffff;
+  font-size: 11px;
+}
+.encadre p { margin: 6px; }
+.clignote { color: #e00000; font-weight: bold; animation: clignote 1s steps(1) infinite; }
+@keyframes clignote { 50% { visibility: hidden; } }
+h2 {
+  font-family: "Comic Sans MS", "Comic Neue", cursive;
+  color: #0d3d78;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.bienvenue { text-align: center; font-style: italic; line-height: 1.5; }
+.photo {
+  float: right;
+  margin: 0 0 10px 14px;
+  border: 4px solid #ffffff;
+  box-shadow: 2px 2px 6px #777777;
+  width: 230px;
+  height: 160px;
+  object-fit: cover;
+}
+ul.services { line-height: 1.8; }
+ul.services li { list-style-image: none; list-style-type: square; }
+.compteur {
+  font-family: "Courier New", monospace;
+  background: #000000;
+  color: #33ff33;
+  padding: 2px 4px;
+  letter-spacing: 2px;
+}
+#pied {
+  clear: both;
+  background: #e9e9e9;
+  border-top: 1px solid #b5bec8;
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+  color: #a0a0a0;
+}
+a { color: #2d6db5; }
+</style>
+</head>
+<body>
+
+<div id="page">
+
+  <div id="bandeau">
+    <h1>Plomberie MOREL</h1>
+    <div class="slogan">~ Votre artisan plombier depuis 2009 ~</div>
+    <img src="../img/depannage-fuite.webp" alt="" />
+  </div>
+
+  <div id="menu">
+    <a href="#" class="actif">Accueil</a>
+    <a href="#">Qui sommes-nous ?</a>
+    <a href="#">Nos services</a>
+    <a href="#">Galerie photos</a>
+    <a href="#">Liens utiles</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <table class="mise-en-page">
+    <tr>
+      <td class="colonne-gauche">
+        <div class="encadre">
+          <h3>Actualités</h3>
+          <p><span class="clignote">NOUVEAU !</span> Notre site internet est en ligne !! (mars 2014)</p>
+          <p>Fermeture annuelle du 1er au 15 août.</p>
+        </div>
+        <div class="encadre">
+          <h3>Nos partenaires</h3>
+          <p>Grossiste sanitaire<br />Fabricant de chaudières<br />Annuaire des artisans</p>
+        </div>
+        <div class="encadre">
+          <h3>Statistiques</h3>
+          <p>Vous êtes le <span class="compteur">004512</span> ème visiteur</p>
+        </div>
+      </td>
+
+      <td class="contenu">
+        <h2>Bienvenue sur le site de la Plomberie Morel !!</h2>
+
+        <p class="bienvenue">
+          Bienvenue sur notre site internet. Nous sommes une entreprise de plomberie
+          sérieuse et dynamique, à votre service pour tous vos travaux de plomberie,
+          chauffage et sanitaire. Forts de notre expérience, nous mettons notre savoir-faire
+          à votre disposition. N'hésitez pas à visiter les différentes pages de notre site
+          pour découvrir nos activités. Bonne visite !
+        </p>
+
+        <img class="photo" src="../img/salle-de-bain.webp" alt="" />
+
+        <p><b>Nos services :</b></p>
+        <ul class="services">
+          <li>Plomberie générale</li>
+          <li>Dépannage</li>
+          <li>Chauffage</li>
+          <li>Chauffe-eau</li>
+          <li>Salle de bain</li>
+          <li>Entretien</li>
+          <li>Et bien plus encore...</li>
+        </ul>
+
+        <p>
+          Nous intervenons sur Paris et sa région. Pour tout renseignement ou demande de
+          devis, n'hésitez pas à nous contacter par e-mail ou par téléphone.
+          <b>Devis sur demande.</b>
+        </p>
+
+        <p style="text-align:center">
+          <a href="mailto:contact@exemple.invalid">&gt;&gt; Cliquez ici pour nous écrire &lt;&lt;</a>
+        </p>
+
+        <p style="text-align:center;color:#c0c0c0">
+          Site optimisé pour Internet Explorer 8 en résolution 1024x768
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <div id="pied">
+    Plomberie Morel - Tél : 01.99.00.12.34 - Paris<br />
+    © 2014 Tous droits réservés - Réalisé avec un créateur de site gratuit<br />
+    Reconstitution fictive réalisée pour une démonstration avant / après.
+  </div>
+
+</div>
+
+</body>
+</html>

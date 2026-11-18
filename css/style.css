@@ -1,0 +1,166 @@
+/* Styles des pages avant / après */
+
+:root {
+  --navy: #13233a;
+  --accent: #c4622d;
+  --accent-dark: #a14f22;
+  --bg-alt: #f4f5f7;
+  --white: #ffffff;
+  --ink: #1b1f24;
+  --muted: #5b6573;
+  --line: #e2e5ea;
+  --before: #6b7280;
+
+  --radius: 10px;
+  --shadow: 0 6px 24px rgba(19, 35, 58, 0.08);
+  --container: 1120px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent-dark); }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.6em; color: var(--navy); }
+h1 { font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1em; }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.container { width: min(100% - 2.5rem, var(--container)); margin-inline: auto; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -100px;
+  background: var(--navy); color: var(--white);
+  padding: 0.6rem 1rem; border-radius: var(--radius); z-index: 100;
+}
+.skip-link:focus { top: 1rem; }
+
+/* En-tête */
+.header { border-bottom: 1px solid var(--line); }
+.header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 1rem 0;
+}
+.brand { font-weight: 700; color: var(--navy); text-decoration: none; }
+.brand small { display: block; font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+
+/* Sections */
+.section { padding: 4rem 0; }
+.section--alt { background: var(--bg-alt); }
+.lead { color: var(--muted); max-width: 640px; }
+.eyebrow {
+  display: inline-block; margin-bottom: 0.6rem;
+  color: var(--accent); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+/* Boutons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.8rem 1.4rem; border-radius: var(--radius);
+  border: 2px solid transparent; font-weight: 700; text-decoration: none;
+}
+.btn--primary { background: var(--accent); color: var(--white); }
+.btn--primary:hover { background: var(--accent-dark); }
+.btn--outline { border-color: var(--navy); color: var(--navy); }
+.btn--light { background: var(--white); color: var(--accent-dark); }
+
+.note {
+  background: var(--bg-alt); border-left: 4px solid var(--accent);
+  padding: 1rem 1.2rem; border-radius: 6px;
+}
+
+/* Liste des comparaisons (accueil) */
+.cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.case {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow); background: var(--white);
+}
+.case img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; width: 100%; }
+.case__body { padding: 1.2rem; }
+.case__body p { color: var(--muted); }
+.case__link { font-weight: 700; }
+.case__link::after { content: " →"; }
+
+/* Curseur avant / après */
+.compare {
+  position: relative; overflow: hidden;
+  border-radius: var(--radius); border: 1px solid var(--line);
+  box-shadow: var(--shadow); aspect-ratio: 1440 / 900; background: var(--bg-alt);
+  touch-action: pan-y;
+}
+.compare img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+}
+/* l'image "avant" est au-dessus, découpée selon la position du curseur */
+.compare__before { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.compare__line {
+  position: absolute; top: 0; bottom: 0; left: var(--pos, 50%);
+  width: 3px; margin-left: -1.5px; background: var(--white);
+  box-shadow: 0 0 0 1px rgba(19, 35, 58, 0.25); pointer-events: none;
+}
+.tag {
+  position: absolute; top: 1rem; padding: 0.3rem 0.7rem; border-radius: 6px;
+  color: var(--white); font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none;
+}
+.tag--before { left: 1rem; background: var(--before); }
+.tag--after { right: 1rem; background: var(--accent); }
+.compare__range { width: 100%; margin-top: 1rem; accent-color: var(--accent); }
+
+/* Téléphones côte à côte */
+.phones {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 260px));
+  gap: 2rem; justify-content: center; margin-top: 2rem;
+}
+.phones figure { margin: 0; text-align: center; }
+.phones img { border: 8px solid var(--navy); border-radius: 28px; box-shadow: var(--shadow); width: 100%; }
+.phones figcaption { margin-top: 0.8rem; color: var(--muted); font-size: 0.95rem; }
+
+/* Tableau des corrections */
+.changes { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.changes caption { text-align: left; color: var(--muted); margin-bottom: 1rem; }
+.changes th, .changes td { text-align: left; vertical-align: top; padding: 0.9rem 0.8rem; border-bottom: 1px solid var(--line); }
+.changes thead th { border-bottom: 2px solid var(--navy); }
+.changes tbody th { color: var(--navy); width: 16%; }
+.changes td:nth-child(2) { color: #8a4a1f; }
+
+/* Appel à l'action */
+.cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding: 2rem; border-radius: var(--radius);
+  background: var(--accent); color: var(--white);
+}
+.cta h2 { color: var(--white); margin-bottom: 0.3rem; }
+.cta p { margin: 0; }
+
+/* Pied de page */
+.footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 760px) {
+  .section { padding: 3rem 0; }
+  .changes thead { display: none; }
+  .changes, .changes caption, .changes tbody, .changes tr, .changes th, .changes td { display: block; width: 100%; }
+  .changes tr { border-bottom: 1px solid var(--line); padding: 0.6rem 0; }
+  .changes th, .changes td { border: 0; padding: 0.25rem 0; }
+  .changes td::before { content: attr(data-label) " : "; font-weight: 700; color: var(--navy); }
+}
